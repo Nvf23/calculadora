@@ -1,0 +1,313 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FDCCC4">
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="0"
+        android:textSize="32sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/logTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="8dp"
+        android:text="Historial de operaciones"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:background="#DDDDDD" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="5"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/buttonMemoryClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="MC"
+            android:background="@drawable/button_press_animation"
+            android:textSize="12sp"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp" />
+
+        <Button
+            android:id="@+id/buttonMemoryRecall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="MR"
+            android:textSize="12sp"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+        <Button
+            android:id="@+id/buttonMemoryStore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="MS"
+            android:textSize="12sp"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+        <Button
+            android:id="@+id/buttonMemoryAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="M+"
+            android:textSize="12sp"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+        <Button
+            android:id="@+id/buttonMemorySubtract"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="M-"
+            android:textSize="12sp"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="C"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="/"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="*"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="-"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="7"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="8"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="9"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="+"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="4"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="5"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="6"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/buttonEquals"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowSpan="3"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:text="="
+            android:layout_margin="4dp"
+            android:elevation="4dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="1"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="2"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="3"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="2"
+            android:text="0"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+
+        <Button
+            android:id="@+id/button00"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="00"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:cornerRadius="0dp"
+            android:background="@drawable/button_press_animation"/>
+
+    </GridLayout>
+</LinearLayout>
